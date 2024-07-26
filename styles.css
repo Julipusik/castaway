@@ -1,0 +1,450 @@
+:root {
+    --white: #FFFFFF;
+    --background: #191919;
+    --blue: #118DA8;
+    --episodebackground: #000000;
+    --cardtextcolor: rgba(255, 255, 255, 0.7);
+    --arrowcolor: rgba(255, 255, 255, 0.8);
+}
+
+body {
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--background);
+}
+
+img {
+    display: block;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/* HEADER */
+
+.container-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 40px 50px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header-heading {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px 0 20px;
+}
+
+.list-item {
+    font-size: 17px;
+    line-height: 27px;
+    text-decoration: none;
+    color: var(--white);
+}
+.list-item:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+/* MAIN */
+
+.home-img {
+    border-radius: 15px;
+    width: 650px;
+    height: 873px;
+}
+
+.home-container {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 70px;
+}
+
+.home-content {
+    padding: 0 0 150px 60px;
+}
+.home-text {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 3.2px;
+    margin: 0;
+}
+
+.underline {
+    text-decoration: var(--blue) solid underline;
+    font-size: 75px;
+}
+
+.bold {
+    font-size: 80px;
+}
+.list-heading {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 80px 0 16px 0;
+}
+
+.platforms-list {
+    display: flex;
+    gap: 17px;
+}
+
+.social-link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.spotify {
+    background-image: url(./images/spotify.svg);
+}
+
+.pocket-casts {
+    background-image: url(./images/pocket-casts.svg);
+}
+
+.soundcloud {
+    background-image: url(./images/soundcloud.svg);
+}
+
+.apple-podcasts {
+    background-image: url(./images/apple-podcasts.svg);
+}
+
+.overcast {
+    background-image: url(./images/overcast.svg);
+}
+
+/* LATEST EPISODES */
+
+.sec2-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    margin: 100px 0 40px 0;
+}
+
+.sec2-heading {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 79px;
+    letter-spacing: 2.88px;
+    margin: 0;
+}
+
+.sec2-button {
+    width: 178px;
+    min-height: 51px;
+    background-color: var(--blue);
+    border: transparent;
+    border-radius: 6px;
+}
+
+.sec2-button-text {
+    font-size: 17px;
+    line-height: 27px;
+    color: var(--white);
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin: 0 70px;
+}
+
+.box {
+    display: flex;
+    gap: 53px;
+    padding: 40px;
+    width: 1300px;
+    height: 545px;
+    background-color: var(--episodebackground);
+    border-radius: 32px;
+}
+
+.box-image {
+    width: 389px;
+    height: 465px;
+}
+
+.box-image2 {
+    height: 432px;
+}
+.category {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0 16px;
+    background-color: var(--background);
+    border-radius: 6px;
+    margin: 7.56px 0 48px 0;
+}
+
+.episode-number {
+    font-size: 17px;
+    line-height: 27px;
+    color: var(--blue);
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+.episode-name {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 70.4px;
+    letter-spacing: 2.56px;
+    margin: 0;
+    margin-bottom: 28px;
+}
+
+.episode-caption {
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0;
+    margin-bottom: 18px;
+    color: var(--cardtextcolor);
+}
+
+/* JACOB PAULANER */
+
+.sec3-container {
+    display: flex;
+    margin: 100px 70px 100px 70px;
+}
+
+.host-info {
+    padding: 147.5px 94px 165.8px 0;
+}
+
+.arrow {
+    font-size: 64px;
+    line-height: 64px;
+    padding: 0 10px;
+    color: var(--arrowcolor);
+    background-color: var(--blue);
+    border-radius: 100px;
+}
+
+.blue-text {
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--blue);
+    margin-top: 20px;
+}
+
+.host-name {
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 79px;
+    letter-spacing: 2.88px;
+    margin: 0;
+    margin-bottom: 28px;
+}
+
+.host-description {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.description-text {
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--cardtextcolor);
+    margin: 0;
+}
+
+.jacob-image {
+    width: 650px;
+    height: 743px;
+    border-radius: 15px;
+}
+
+/* SUBSCRIBE */
+
+.sec4-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--episodebackground);
+    border-radius: 32px;
+    margin: 0 70px;
+    padding: 59px 60px 75px 60px;
+}
+
+.form-name {
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--blue);
+    margin: 0;
+}
+
+.form-description {
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 79px;
+    letter-spacing: 2.88px;
+    margin: 0;
+}
+
+.submit-it {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input {
+    font-size: 24px;
+    line-height: 28.8px;
+    padding: 26px 19px;
+    width: 522px;
+    color: var(--cardtextcolor);
+    background-color: var(--background);
+    border: transparent;
+    border-radius: 6px;
+}
+
+.sec4-button {
+    padding: 10px 16px;
+    width: 87px;
+    background-color: var(--blue);
+    border: transparent;
+    border-radius: 6px;
+}
+
+.sec4-button-text {
+    font-size: 15px;
+    line-height: 28.8px;
+    color: var(--white);
+}
+
+/* REVIEWS */
+
+.reviews-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 100px;
+}
+
+.review {
+    background-color: var(--episodebackground);
+    border-radius: 32px;
+    padding: 54px 50px 50px 50px;
+    width: 423px;
+}
+
+.stars {
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.star {
+    background-image: url(./images/star.svg);
+}
+
+.review-text {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    margin: 0;
+    margin-top: 21px;
+}
+
+.username {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: var(--cardtextcolor);
+    margin: 0;
+    margin-top: 19px;
+}
+
+/* FOOTER */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 116px 70px 70px 70px;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-heading {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.nav-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 23px;
+}
+
+.social {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.instagram {
+    background-image: url(./images/instagram.svg);
+}
+
+.twitter {
+    background-image: url(./images/twitter.svg);
+}
+
+.facebook {
+    background-image: url(./images/facebook.svg);
+}
+
+.nav-site {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-link {
+    font-size: 17px;
+    line-height: 27px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav-link:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
