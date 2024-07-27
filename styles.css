@@ -5,10 +5,15 @@
     --episodebackground: #000000;
     --cardtextcolor: rgba(255, 255, 255, 0.7);
     --arrowcolor: rgba(255, 255, 255, 0.8);
+    --mobile: 428px;
+    --tablet: 768px;
+    --desktop: 1440px;
 }
 
+/* !!MOBILE!! */
+
 body {
-    width: 100%;
+    min-width: var(--mobile);
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     color: var(--white);
@@ -24,6 +29,8 @@ img {
     margin: 0;
     list-style: none;
 }
+
+
 /* HEADER */
 
 .container-header {
@@ -31,7 +38,7 @@ img {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 40px 50px;
+    padding: 30px;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -43,65 +50,70 @@ img {
 }
 
 .navigation {
-    display: flex;
-    gap: 40px;
-    padding: 0 20px 0 20px;
+    display: none;
 }
 
-.list-item {
-    font-size: 17px;
-    line-height: 27px;
-    text-decoration: none;
-    color: var(--white);
+.open-menu {
+    background-color: transparent;
+    border: none;
 }
-.list-item:hover {
-    color: var(--blue);
-    cursor: pointer;
+
+.hamburger-menu {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./images/menu.svg);
 }
 
 /* MAIN */
 
 .home-img {
     border-radius: 15px;
-    width: 650px;
-    height: 873px;
+    width: 368px;
+    height: 523px;
+    margin: 0 auto;
 }
 
 .home-container {
     display: flex;
-    align-items: flex-end;
-    padding: 0 70px;
+    flex-direction: column;
+    padding: 0 30px;
 }
 
 .home-content {
-    padding: 0 0 150px 60px;
+    margin-top: 16px;
 }
+
 .home-text {
-    font-size: 70px;
+    font-size: 46px;
     font-weight: 400;
-    line-height: 88px;
-    letter-spacing: 3.2px;
+    line-height: 56px;
+    letter-spacing: 2.88px;
     margin: 0;
 }
 
 .underline {
     text-decoration: var(--blue) solid underline;
-    font-size: 75px;
+    font-size: 54px;
 }
 
 .bold {
-    font-size: 80px;
+    font-size: 60px;
 }
+
 .list-heading {
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
-    margin: 80px 0 16px 0;
+    margin: 40px 0 16px 0;
 }
 
 .platforms-list {
     display: flex;
-    gap: 17px;
+    gap: 14px;
 }
 
 .social-link {
@@ -138,59 +150,62 @@ img {
 .sec2-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 70px;
-    margin: 100px 0 40px 0;
+    padding: 0 30px;
+    margin: 60px 0 20px 0;
 }
 
 .sec2-heading {
-    font-size: 64px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: 79px;
-    letter-spacing: 2.88px;
+    line-height: 58px;
+    letter-spacing: 2px;
     margin: 0;
+    margin-right: 30px;
 }
 
 .sec2-button {
     width: 178px;
-    min-height: 51px;
+    min-height: 50px;
     background-color: var(--blue);
     border: transparent;
     border-radius: 6px;
 }
 
 .sec2-button-text {
-    font-size: 17px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 26px;
     color: var(--white);
 }
 
 .box-container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    margin: 0 70px;
+    gap: 40px;
+    padding: 0 30px;
 }
 
 .box {
     display: flex;
-    gap: 53px;
-    padding: 40px;
-    width: 1300px;
-    height: 545px;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
     background-color: var(--episodebackground);
     border-radius: 32px;
 }
 
 .box-image {
-    width: 389px;
-    height: 465px;
+    width: 289px;
+    height: 365px;
+    margin: 0 auto;
 }
 
 .box-image2 {
-    height: 432px;
+    width: 289px;
+    height: 332px;
+    margin: 0 auto;
 }
+
 .category {
     display: inline-block;
     font-size: 18px;
@@ -198,7 +213,8 @@ img {
     padding: 0 16px;
     background-color: var(--background);
     border-radius: 6px;
-    margin: 7.56px 0 48px 0;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .episode-number {
@@ -206,21 +222,21 @@ img {
     line-height: 27px;
     color: var(--blue);
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .episode-name {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 400;
-    line-height: 70.4px;
-    letter-spacing: 2.56px;
+    line-height: 68px;
+    letter-spacing: 2px;
     margin: 0;
     margin-bottom: 28px;
 }
 
 .episode-caption {
-    font-size: 22px;
-    line-height: 33px;
+    font-size: 20px;
+    line-height: 30px;
     margin: 0;
     margin-bottom: 18px;
     color: var(--cardtextcolor);
@@ -230,54 +246,56 @@ img {
 
 .sec3-container {
     display: flex;
-    margin: 100px 70px 100px 70px;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 30px;
 }
 
 .host-info {
-    padding: 147.5px 94px 165.8px 0;
+    margin-bottom: 20px;
 }
 
 .arrow {
-    font-size: 64px;
-    line-height: 64px;
-    padding: 0 10px;
+    font-size: 52px;
+    line-height: 52px;
+    padding: 0 8px;
     color: var(--arrowcolor);
     background-color: var(--blue);
     border-radius: 100px;
 }
 
 .blue-text {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 26px;
     color: var(--blue);
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .host-name {
-    font-size: 65px;
+    font-size: 44px;
     font-weight: 400;
-    line-height: 79px;
-    letter-spacing: 2.88px;
+    line-height: 74px;
+    letter-spacing: 2px;
     margin: 0;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 
 .host-description {
     display: flex;
     flex-direction: column;
-    gap: 33px;
+    gap: 16px;
 }
 
 .description-text {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 33px;
     color: var(--cardtextcolor);
     margin: 0;
 }
 
 .jacob-image {
-    width: 650px;
-    height: 743px;
+    width: 368px;
+    height: 443px;
     border-radius: 15px;
 }
 
@@ -285,39 +303,38 @@ img {
 
 .sec4-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     background-color: var(--episodebackground);
     border-radius: 32px;
-    margin: 0 70px;
-    padding: 59px 60px 75px 60px;
+    margin: 0 30px;
+    padding: 40px;
 }
 
 .form-name {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 25px;
     color: var(--blue);
     margin: 0;
 }
 
 .form-description {
-    font-size: 72px;
+    font-size: 48px;
     font-weight: 400;
-    line-height: 79px;
-    letter-spacing: 2.88px;
+    line-height: 58px;
+    letter-spacing: 2px;
     margin: 0;
 }
 
 .submit-it {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
 }
 
 .form-input {
-    font-size: 24px;
-    line-height: 28.8px;
-    padding: 26px 19px;
-    width: 522px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 16px;
     color: var(--cardtextcolor);
     background-color: var(--background);
     border: transparent;
@@ -325,16 +342,16 @@ img {
 }
 
 .sec4-button {
-    padding: 10px 16px;
-    width: 87px;
+    padding: 8px 12px;
+    width: 84px;
     background-color: var(--blue);
     border: transparent;
     border-radius: 6px;
 }
 
 .sec4-button-text {
-    font-size: 15px;
-    line-height: 28.8px;
+    font-size: 14px;
+    line-height: 28px;
     color: var(--white);
 }
 
@@ -344,21 +361,22 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    margin-top: 100px;
+    gap: 14px;
+    margin-top: 60px;
+    padding: 0 30px;
 }
 
 .review {
     background-color: var(--episodebackground);
     border-radius: 32px;
-    padding: 54px 50px 50px 50px;
-    width: 423px;
+    padding: 40px 30px;
+    width: 368px;
 }
 
 .stars {
     display: inline-block;
-    width: 18px;
-    height: 17px;
+    width: 16px;
+    height: 15px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -369,20 +387,20 @@ img {
 }
 
 .review-text {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
-    line-height: 43px;
+    line-height: 38px;
     margin: 0;
-    margin-top: 21px;
+    margin-top: 16px;
 }
 
 .username {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 28.8px;
+    line-height: 26px;
     color: var(--cardtextcolor);
     margin: 0;
-    margin-top: 19px;
+    margin-top: 16px;
 }
 
 /* FOOTER */
@@ -390,7 +408,7 @@ img {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    padding: 116px 70px 70px 70px;
+    padding: 60px 30px;
 }
 
 .footer-socials {
@@ -399,15 +417,15 @@ img {
 }
 
 .footer-heading {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
     margin: 0;
 }
 
 .nav-social {
     display: flex;
-    gap: 10px;
-    margin-top: 23px;
+    gap: 8px;
+    margin-top: 16px;
 }
 
 .social {
@@ -432,19 +450,517 @@ img {
 }
 
 .nav-site {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: none;
 }
 
-.nav-link {
-    font-size: 17px;
-    line-height: 27px;
-    text-decoration: none;
-    color: var(--white);
+/* !!TABLET!! */
+
+@media screen and (min-width: 768px) {
+    body {
+        min-width: var(--tablet);
+    }
+
+    .container-header {
+        padding: 40px;
+    }
+    
+    .open-menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 28px;
+        padding: 0 20px 0 20px;
+    }
+
+    .list-item {
+        font-size: 17px;
+        line-height: 27px;
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .list-item:hover {
+        color: var(--blue);
+        cursor: pointer;
+    }
+
+    /* MAIN */
+
+    .home-img {
+        width: 380px;
+        height: 603px;
+    }
+
+    .home-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    .home-content {
+        margin-left: 40px;
+    }
+
+    .home-text {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 2.3px;
+    }
+
+    .underline {
+        font-size: 64px;
+    }
+
+    .bold {
+        font-size: 70px;
+    }
+
+    .list-heading {
+        margin: 54px 0 16px 0;
+    }
+
+    .platforms-list {
+        gap: 16px;
+    }
+
+    /* LATEST EPISODES */
+
+    .sec2-container {
+        justify-content: space-between;
+        padding: 0 50px;
+        margin: 80px 0 30px 0;
+    }
+
+    .sec2-heading {
+        font-size: 56px;
+        line-height: 70px;
+        letter-spacing: 2.5px;
+        margin: 0;
+    }
+
+    .sec2-button {
+        min-height: 51px;
+    }
+
+    .sec2-button-text {
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    .box-container {
+        gap: 54px;
+        margin: 0;
+        padding: 0 50px;
+    }
+
+    .box {
+        flex-direction: row;
+        align-items: center;
+        gap: 53px;
+        padding: 40px;
+    }
+
+    .box-image {
+        margin: 0;
+        width: 279px;
+        height: 355px;
+    }
+
+    .box-image2 {
+        margin: 0;
+        width: 279px;
+        height: 322px;
+    }
+
+    .category {
+        margin: 7px 0 32px 0;
+    }
+
+    .episode-number {
+        margin-bottom: 16px;
+    }
+
+    .episode-name {
+        font-size: 46px;
+        line-height: 54px;
+        letter-spacing: 2px;
+    }
+    
+    /* JACOB PAULANER */
+
+    .sec3-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 80px 50px;
+    }
+
+    .host-info {
+        margin: 0;
+        margin-right: 30px;
+    }
+
+    .arrow {
+        font-size: 64px;
+        line-height: 64px;
+        padding: 0 10px;
+    }
+
+    .blue-text {
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 20px;
+    }
+
+    .host-name {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 2.33px;
+        margin-bottom: 28px;
+    }
+
+    .host-description {
+        gap: 25px;
+    }
+
+    .jacob-image {
+        width: 390px;
+        height: 570px;
+    }
+    
+    /* SUBSCRIBE */
+
+    .sec4-container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 50px;
+        padding: 46px 50px;
+    }
+
+    .form-name {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .form-description {
+        font-size: 58px;
+        line-height: 69px;
+        letter-spacing: 2.2px;
+        margin-right: 10px;
+    }
+
+    .submit-it {
+        gap: 18px;
+    }
+
+    .form-input {
+        font-size: 20px;
+        line-height: 26px;
+        padding: 22px 18px;
+    }
+
+    .sec4-button {
+        padding: 10px 16px;
+        width: 87px;
+    }
+
+    .sec4-button-text {
+        font-size: 15px;
+        line-height: 28.8px;
+    }
+
+    /* REVIEWS */
+
+    .reviews-list {
+        gap: 22px;
+        margin-top: 80px;
+    }
+
+    .review {
+        padding: 44px 40px;
+        width: 423px;
+    }
+
+    .stars {
+        width: 18px;
+        height: 17px;
+    }
+
+    .review-text {
+        font-size: 30px;
+        line-height: 39px;
+        margin-top: 19px;
+    }
+
+    .username {
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 17px;
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 90px 50px 50px 50px;
+    }
+
+    .footer-socials {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-heading {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .nav-social {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .social {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .instagram {
+        background-image: url(./images/instagram.svg);
+    }
+
+    .twitter {
+        background-image: url(./images/twitter.svg);
+    }
+
+    .facebook {
+        background-image: url(./images/facebook.svg);
+    }
+
+    .nav-site {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: 15px;
+        line-height: 25px;
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .nav-link:hover {
+        color: var(--blue);
+        cursor: pointer;
+    }
 }
 
-.nav-link:hover {
-    color: var(--blue);
-    cursor: pointer;
+/* !!DESKTOP!! */
+
+@media screen and (min-width: 1140px) {
+    body {
+        min-width: var(--desktop);
+    }
+
+    .navigation {
+        gap: 40px;
+    }
+
+    /* MAIN */
+
+    .home-img {
+        width: 650px;
+        height: 873px;
+    }
+
+    .home-container {
+        align-items: flex-end;
+        padding: 0 70px;
+    }
+
+    .home-content {
+        padding: 0 0 150px 60px;
+        margin: 0;
+    }
+
+    .home-text {
+        font-size: 70px;
+        line-height: 88px;
+        letter-spacing: 3.2px;
+    }
+
+    .underline {
+        font-size: 75px;
+    }
+
+    .bold {
+        font-size: 80px;
+    }
+
+    .list-heading {
+        margin: 80px 0 16px 0;
+    }
+
+    .platforms-list {
+        gap: 17px;
+    }
+
+    /* LATEST EPISODES */
+
+    .sec2-container {
+        padding: 0 70px;
+        margin: 100px 0 40px 0;
+    }
+
+    .sec2-heading {
+        font-size: 64px;
+        line-height: 79px;
+        letter-spacing: 2.88px;
+    }
+
+    .box-container {
+        gap: 60px;
+        padding: 0 70px;
+    }
+
+    .box {
+        width: 1300px;
+        height: 545px;
+    }
+
+    .category {
+        margin: 7.56px 0 48px 0;
+    }
+
+    .episode-number {
+        margin-bottom: 18px;
+    }
+
+    .episode-name {
+        font-size: 64px;
+        line-height: 70.4px;
+        letter-spacing: 2.56px;
+    }
+
+    .episode-caption {
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    /* JACOB PAULANER */
+
+    .sec3-container {
+        padding: 100px 70px;
+    }
+
+    .host-info {
+        padding: 147.5px 94px 165.8px 0;
+        margin: 0;
+    }
+
+    .host-name {
+        font-size: 65px;
+        line-height: 79px;
+        letter-spacing: 2.88px;
+    }
+
+    .host-description {
+        gap: 33px;
+    }
+
+    .description-text {
+        font-size: 22px;
+    }
+
+    .jacob-image {
+        width: 650px;
+        height: 743px;
+    }
+
+    /* SUBSCRIBE */
+
+    .sec4-container {
+        margin: 0 70px;
+        padding: 59px 60px 75px 60px;
+    }
+
+    .form-description {
+        font-size: 72px;
+        line-height: 79px;
+        letter-spacing: 2.88px;
+    }
+
+    .submit-it {
+        gap: 20px;
+    }
+
+    .form-input {
+        width: 522px;
+        font-size: 24px;
+        line-height: 28.8px;
+        padding: 26px 19px;
+    }
+
+    /* REVIEWS */
+
+    .reviews-list {
+        gap: 16px;
+        margin-top: 100px;
+    }
+
+    .review {
+        padding: 54px 50px 50px 50px;
+    }
+
+    .review-text {
+        font-size: 36px;
+        line-height: 43px;
+        margin-top: 21px;
+    }
+
+    .username {
+        font-size: 24px;
+        line-height: 28.8px;
+        margin-top: 19px;
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        padding: 116px 70px 70px 70px;
+    }
+
+    .nav-social {
+        margin-top: 23px;
+    }
+
+    .instagram {
+        background-image: url(./images/instagram.svg);
+    }
+
+    .twitter {
+        background-image: url(./images/twitter.svg);
+    }
+
+    .facebook {
+        background-image: url(./images/facebook.svg);
+    }
+
+    .nav-site {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 17px;
+        line-height: 27px;
+    }
 }
